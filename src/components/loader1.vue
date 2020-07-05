@@ -11,6 +11,7 @@
         data() {
             return{
                 bgcolors: ''
+
             };
         },
         created() {
@@ -29,7 +30,6 @@
 
 <style scoped>
     #overlay{
-        /*background-color: rgba(52,58,64,1);*/
         height: 100%;
         width: 100%;
         position: fixed;
@@ -41,8 +41,6 @@
     }
 
     .loader{
-        /*border: 5px solid grey;*/
-        /*border-top: 5px solid blue;*/
         border-radius: 50%;
         width: 120px;
         height: 120px;
