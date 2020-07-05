@@ -12,6 +12,11 @@
                   :styling="styling"
           ></minibars>
       </div>
+      <div v-else-if="selected=='toptombar'">
+          <toptombar
+                  :styling="styling"
+          ></toptombar>
+      </div>
       <br><br><br>
 
 <!--    selectors-->
@@ -23,6 +28,10 @@
         <br><br>
         <button class="btn btn-primary" @click="loader('minibar')">
             Mini Bar
+        </button>
+        <br><br>
+        <button class="btn btn-primary" @click="loader('toptombar')">
+            Top-tombar
         </button>
     </div>
 
@@ -69,6 +78,7 @@
 
 import loader1 from "./components/loader1";
 import dots from "./components/dots";
+import toptombar from "./components/toptombar";
 
 export default {
   data(){
@@ -88,7 +98,8 @@ export default {
   name: 'App',
   components: {
     loader1: loader1,
-      minibars: dots
+      minibars: dots,
+      toptombar: toptombar,
   },
   methods: {
     loader(loader) {
