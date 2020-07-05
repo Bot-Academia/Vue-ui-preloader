@@ -1,6 +1,6 @@
 <template>
     <div id="overlay" :style="{'background-color': bgcolors}">
-        <div class="loader" :style="{'border': styling.size + 'px solid ' + styling.wheelbg,'border-top': styling.size + 'px solid ' + styling.wheelcolor}"></div>
+        <div class="loader" :style="{'border': styling.size + 'px solid ' + styling.wheelbg,'border-top': styling.size + 'px solid ' + styling.wheelcolor,'animation-duration': styling.speed +'s',}"></div>
     </div>
 </template>
 
@@ -24,11 +24,14 @@
                 c= '0x'+c.join('');
                 this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.styling.opacity/100 +')';
             }
+            console.log(this.styling.speed);
         }
     }
 </script>
 
 <style scoped>
+
+
     #overlay{
         height: 100%;
         width: 100%;
