@@ -40,6 +40,11 @@
           <h4>Size of animation:</h4>
           <b-form-input id="range-1" v-model="styling.size" type="range" min="0" max="30"></b-form-input>
           <div class="mt-2">Size in pixel: {{ styling.size }}</div>
+           <h2>Speed:</h2>
+          <div>
+              <b-form-input id="range-1" v-model="styling.speed" type="range" min="0" max="10"></b-form-input>
+              <div class="mt-2">Seconds: {{ styling.speed }}</div>
+          </div>
       </div>
 
       <br><br><br>
@@ -70,6 +75,7 @@ export default {
             opacity: 100,
             bgcolor: '#343a40',
             size: 5,
+            speed: 2,
         }
     };
   },
