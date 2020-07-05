@@ -4,10 +4,7 @@
 <!--    loaders-->
     <div v-if="selected=='loader1'">
       <loader1
-      :wheelcolor="wheelcolor"
-      :bgcolor="bgcolor"
-      :wheelbg="wheelbg"
-      :opacity="opacity"
+        :styling="styling"
       ></loader1>
     </div>
     <div v-else>
@@ -21,28 +18,34 @@
     <div class="container">
         <h2>Loader options</h2>
       <button class="btn btn-primary" @click="loader1">
-        Static Loader
+        Spinning Wheel
       </button>
     </div>
 
       <br><br><br>
       <!--      props to be passed-->
-      <div class="container">
-          <h4>Wheel color:</h4>
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="wheelcolor">
-          {{wheelcolor}}
-          <h4>Background Color:</h4>
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="bgcolor">
-          {{bgcolor}}
+      <div class="container form">
+          <h4>Animation Color:
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelcolor">
+          {{styling.wheelcolor}}</h4>
+          <h4>Background Color:
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.bgcolor">
+          {{styling.bgcolor}}</h4>
+          <h4>Animation Background Color:
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelbg">
+              {{styling.wheelbg}}</h4>
           <h4>Background Color opacity:</h4>
-          <b-form-input id="range-1" v-model="opacity" type="range" min="0" max="100"></b-form-input>
-          <div class="mt-2">Opacity-percentage: {{ opacity }}</div>
-          <h4>Wheel Background Color:</h4>
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="wheelbg">
-          {{wheelbg}}
+          <b-form-input id="range-1" v-model="styling.opacity" type="range" min="0" max="100"></b-form-input>
+          <div class="mt-2">Opacity-percentage: {{ styling.opacity }}</div>
+          <h4>Size of animation:</h4>
+          <b-form-input id="range-1" v-model="styling.size" type="range" min="0" max="30"></b-form-input>
+          <div class="mt-2">Size in pixel: {{ styling.size }}</div>
       </div>
+
+      <br><br><br>
+
       <div class="container">
-          <h4>Test Duration:</h4>
+          <h2>Test Duration:</h2>
           <div>
               <b-form-input id="range-1" v-model="value" type="range" min="0" max="10"></b-form-input>
               <div class="mt-2">Seconds: {{ value }}</div>
@@ -61,10 +64,13 @@ export default {
     return{
       selected: '',
         value: 5,
-        wheelcolor: '#ffbb0f',
-        wheelbg: '#999793',
-        opacity: 100,
-        bgcolor: '#343a40'
+        styling: {
+            wheelcolor: '#ffbb0f',
+            wheelbg: '#999793',
+            opacity: 100,
+            bgcolor: '#343a40',
+            size: 5,
+        }
     };
   },
   name: 'App',
@@ -83,5 +89,8 @@ export default {
 </script>
 
 <style>
-
+.form{
+    background-color: lightblue;
+    border-radius: 15px;
+}
 </style>
