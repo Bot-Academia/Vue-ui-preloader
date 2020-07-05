@@ -4,26 +4,31 @@
 <!--    loaders-->
     <div v-if="selected=='loader1'">
       <loader1
-        :styling="styling"
+                  :styling="styling"
       ></loader1>
     </div>
-    <div v-else>
-      <h1>Select a loader first</h1>
-    </div>
+      <div v-else-if="selected=='minibar'">
+          <minibars
+                  :styling="styling"
+          ></minibars>
+      </div>
       <br><br><br>
-
-
 
 <!--    selectors-->
     <div class="container">
         <h2>Loader options</h2>
-      <button class="btn btn-primary" @click="loader1">
+      <button class="btn btn-primary" @click="loader('loader1')">
         Spinning Wheel
       </button>
+        <br><br>
+        <button class="btn btn-primary" @click="loader('minibar')">
+            Mini Bar
+        </button>
     </div>
 
       <br><br><br>
-      <!--      props to be passed-->
+
+<!--      props to be passed-->
       <div class="container form">
           <h4>Animation Color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelcolor">
@@ -49,7 +54,7 @@
 
       <br><br><br>
 
-      <div class="container">
+      <div class="container test">
           <h2>Test Duration:</h2>
           <div>
               <b-form-input id="range-1" v-model="value" type="range" min="0" max="10"></b-form-input>
@@ -63,6 +68,7 @@
 <script>
 
 import loader1 from "./components/loader1";
+import dots from "./components/dots";
 
 export default {
   data(){
@@ -82,10 +88,11 @@ export default {
   name: 'App',
   components: {
     loader1: loader1,
+      minibars: dots
   },
   methods: {
-    loader1() {
-      this.selected='loader1';
+    loader(loader) {
+      this.selected=loader;
       setTimeout(() => {
         this.selected='';
       }, this.value*1000);
@@ -95,8 +102,9 @@ export default {
 </script>
 
 <style>
-.form{
+.form,.test{
     background-color: lightblue;
     border-radius: 15px;
+    box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
 }
 </style>
