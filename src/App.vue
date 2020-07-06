@@ -17,6 +17,11 @@
                   :styling="styling"
           ></toptombar>
       </div>
+      <div v-else-if="selected=='circular'">
+          <circular
+                  :styling="styling"
+          ></circular>
+      </div>
 
 <!--    selectors-->
 
@@ -27,6 +32,7 @@
             <div class="inner"><button class="btn btn-primary" @click="loader('loader1')" >Spinner</button></div>
             <div class="inner"><button class="btn btn-primary" @click="loader('minibar')">Dots</button></div>
             <div class="inner"><button class="btn btn-primary" @click="loader('toptombar')">Loading</button></div>
+            <div class="inner"><button class="btn btn-primary" @click="loader('circular')">circular</button></div>
         </div>
     </div>
 
@@ -74,6 +80,7 @@
 import loader1 from "./components/loader1";
 import dots from "./components/dots";
 import toptombar from "./components/toptombar";
+import circular from "./components/circular";
 
 export default {
   data(){
@@ -95,6 +102,7 @@ export default {
     loader1: loader1,
       minibars: dots,
       toptombar: toptombar,
+      circular: circular
   },
   methods: {
     loader(loader) {
