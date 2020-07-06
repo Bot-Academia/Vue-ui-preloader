@@ -2,32 +2,7 @@
   <div id="app" class="container">
 
 <!--    loaders-->
-    <div v-if="selected=='loader1'">
-      <loader1
-                  :styling="styling"
-      ></loader1>
-    </div>
-      <div v-else-if="selected=='minibar'">
-          <minibars
-                  :styling="styling"
-          ></minibars>
-      </div>
-      <div v-else-if="selected=='toptombar'">
-          <toptombar
-                  :styling="styling"
-          ></toptombar>
-      </div>
-      <div v-else-if="selected=='circular'">
-          <circular
-                  :styling="styling"
-          ></circular>
-      </div>
-      <div v-else-if="selected=='box'">
-          <box
-                  :styling="styling"
-          ></box>
-
-      </div>
+    <loader :styling="styling" :name="selected"></loader>
 
 <!--    selectors-->
 
@@ -36,7 +11,7 @@
         <h2>Loader options</h2>
         <div id="outer">
             <div class="inner"><button class="btn btn-primary" @click="loader('loader1')" >Spinner</button></div>
-            <div class="inner"><button class="btn btn-primary" @click="loader('minibar')">Dots</button></div>
+            <div class="inner"><button class="btn btn-primary" @click="loader('dots')">Dots</button></div>
             <div class="inner"><button class="btn btn-primary" @click="loader('toptombar')">Loading</button></div>
             <div class="inner"><button class="btn btn-primary" @click="loader('circular')">circular</button></div>
             <div class="inner"><button class="btn btn-primary" @click="loader('box')">Box</button></div>
@@ -86,11 +61,7 @@
 
 <script>
 
-import loader1 from "./components/loader1";
-import dots from "./components/dots";
-import toptombar from "./components/toptombar";
-import circular from "./components/circular";
-import box from "./components/box";
+import loader from "./components/loader"
 
 export default {
   data(){
@@ -106,17 +77,12 @@ export default {
             bgcolor: '#343a40',
             size: 5,
             speed: 2,
-        }
+        },
     };
   },
   name: 'App',
   components: {
-    loader1: loader1,
-      minibars: dots,
-      toptombar: toptombar,
-      circular: circular,
-      box: box,
-
+    loader: loader,
   },
   methods: {
     loader(loader) {
