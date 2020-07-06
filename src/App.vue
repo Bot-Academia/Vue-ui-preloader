@@ -20,8 +20,8 @@
       <div v-else-if="selected=='circular'">
           <circular
                   :styling="styling"
-          ></circular></div>
-
+          ></circular>
+      </div>
       <div v-else-if="selected=='box'">
           <box
                   :styling="styling"
@@ -112,6 +112,7 @@ export default {
       toptombar: toptombar,
       circular: circular,
       box: box,
+
   },
   methods: {
     loader(loader) {

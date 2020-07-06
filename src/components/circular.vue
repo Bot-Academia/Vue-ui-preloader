@@ -16,7 +16,9 @@ export default {
         },
         created() {
             let root = document.documentElement;
-            root.style.setProperty('--time-animation', "load7 " + this.styling.speed + "s infinite ease-in-out");
+            root.style.setProperty('--time-animation1', "spin-circular "+ (this.styling.speed-0.5)+"s linear infinite");
+            root.style.setProperty('--time-animation2', "spin-circular "+ (this.styling.speed)+"s linear infinite");
+            root.style.setProperty('--time-animation3', "spin-circular "+ (this.styling.speed+1.0)+"s linear infinite");
             var c;
             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
                 c= this.styling.bgcolor.substring(1).split('');
@@ -31,6 +33,11 @@ export default {
 </script>
 
 <style>
+  :root{
+    --time-animation1: spin-circular 1.5s linear infinite;
+    --time-animation2: spin-circular 2s linear infinite;
+    --time-animation3: spin-circular 3s linear infinite;
+  }
 #overlay-circular {
     position: fixed;
     top: 0;
@@ -50,8 +57,8 @@ export default {
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #9370DB;
-    -webkit-animation: spin-circular 2s linear infinite;
-    animation: spin-circular 2s linear infinite;
+    -webkit-animation: var(--time-animation2);
+    animation: var(--time-animation2);
 }
 .loader-circular:before {
     content: "";
@@ -63,8 +70,8 @@ export default {
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #BA55D3;
-    -webkit-animation: spin-circular 3s linear infinite;
-    animation: spin-circular 3s linear infinite;
+    -webkit-animation: var(--time-animation3);
+    animation: var(--time-animation3);
 }
 .loader-circular:after {
     content: "";
@@ -76,8 +83,8 @@ export default {
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #FF00FF;
-    -webkit-animation: spin-circular 1.5s linear infinite;
-    animation: spin-circular 1.5s linear infinite;
+    -webkit-animation: var(--time-animation1);
+    animation: var(--time-animation1);
 }
 @-webkit-keyframes spin-circular {
     0%   {
