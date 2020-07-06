@@ -17,7 +17,7 @@ export default {
         created() {
             let root = document.documentElement;
 
-            root.style.setProperty('--color-animation1', this.styling.wheelcolor);
+            root.style.setProperty('--color-animation1', this.styling.objectcolor);
             root.style.setProperty('--color-animation2', this.styling.animationcolor);
             root.style.setProperty('--color-animation3', this.styling.animationcolor2);
             root.style.setProperty('--border-size',this.styling.size+'px solid transparent');
@@ -70,10 +70,6 @@ export default {
     border-radius: 50%;
     border: var(--border-size);
     border-top-color: var(--color-animation1);
-    -webkit-animation: spin-circular 2s linear infinite;
-    animation: spin-circular 2s linear infinite;
-    border: 3px solid transparent;
-    border-top-color: #9370DB;
     -webkit-animation: var(--time-animation2);
     animation: var(--time-animation2);
 }
@@ -87,10 +83,6 @@ export default {
     border-radius: 50%;
     border: var(--border-size);
     border-top-color: var(--color-animation2);
-    -webkit-animation: spin-circular 3s linear infinite;
-    animation: spin-circular 3s linear infinite;
-    border: 3px solid transparent;
-    border-top-color: #BA55D3;
     -webkit-animation: var(--time-animation3);
     animation: var(--time-animation3);
 }
@@ -104,10 +96,6 @@ export default {
     border-radius: 50%;
     border: var(--border-size);
     border-top-color: var(--color-animation3);
-    -webkit-animation: spin-circular 1.5s linear infinite;
-    animation: spin-circular 1.5s linear infinite;
-    border: 3px solid transparent;
-    border-top-color: #FF00FF;
     -webkit-animation: var(--time-animation1);
     animation: var(--time-animation1);
 }

@@ -1,6 +1,6 @@
 <template>
 <div id="overlay-bar" :style="{'background-color': bgcolors}">
-        <div class="loader-bar" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px',}">Loading..</div>
+        <div class="loader-bar" :style="{'color': styling.objectcolor,'font-size': styling.size+'px',}">Loading..</div>
     </div>
 </template>
 
