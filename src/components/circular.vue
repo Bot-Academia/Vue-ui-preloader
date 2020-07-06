@@ -16,7 +16,10 @@ export default {
         },
         created() {
             let root = document.documentElement;
-            root.style.setProperty('--time-animation', "load7 " + this.styling.speed + "s infinite ease-in-out");
+            root.style.setProperty('--color-animation1', this.styling.wheelcolor);
+            root.style.setProperty('--color-animation2', this.styling.animationcolor);
+            root.style.setProperty('--color-animation3', this.styling.animationcolor2);
+            root.style.setProperty('--border-size',this.styling.size+'px solid transparent');
             var c;
             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
                 c= this.styling.bgcolor.substring(1).split('');
@@ -31,6 +34,14 @@ export default {
 </script>
 
 <style>
+
+:root{
+    --color-animation1: #9370DB;
+    --color-animation2: #9370DB;
+    --color-animation3: #9370DB;
+    --border-size: 3px solid transparent;
+}
+
 #overlay-circular {
     position: fixed;
     top: 0;
@@ -48,8 +59,8 @@ export default {
     height: 150px;
     margin: -75px 0 0 -75px;
     border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #9370DB;
+    border: var(--border-size);
+    border-top-color: var(--color-animation1);
     -webkit-animation: spin-circular 2s linear infinite;
     animation: spin-circular 2s linear infinite;
 }
@@ -61,8 +72,8 @@ export default {
     right: 5px;
     bottom: 5px;
     border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #BA55D3;
+    border: var(--border-size);
+    border-top-color: var(--color-animation2);
     -webkit-animation: spin-circular 3s linear infinite;
     animation: spin-circular 3s linear infinite;
 }
@@ -74,8 +85,8 @@ export default {
     right: 15px;
     bottom: 15px;
     border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #FF00FF;
+    border: var(--border-size);
+    border-top-color: var(--color-animation3);
     -webkit-animation: spin-circular 1.5s linear infinite;
     animation: spin-circular 1.5s linear infinite;
 }
