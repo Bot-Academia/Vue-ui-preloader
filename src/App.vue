@@ -4,10 +4,9 @@
 <!--    loaders-->
     <loader :styling="styling" :name="selected"></loader>
 
-<!--    selectors-->
 
 <!--      formal-->
-    <div class="container">
+    <div class="container main">
         <h2>Loader options</h2>
         <div id="outer">
             <div class="inner"><button class="btn btn-primary" @click="loader('loader1')" >Spinner</button></div>
@@ -24,9 +23,11 @@
       <div class="container form">
           <h4>Animation Color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectcolor">
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor">
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor2">
-          {{styling.wheelcolor}},{{styling.animationcolor}},{{styling.animationcolor2}}</h4>
+          {{styling.objectcolor}}</h4>
+          <h4> Additional Color selector:
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor">
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor2">
+              {{styling.animationcolor}},{{styling.animationcolor2}}</h4>
           <h4>Background Color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.bgcolor">
           {{styling.bgcolor}}</h4>
@@ -67,13 +68,13 @@ export default {
   data(){
     return{
       selected: '',
-        value: 5,
+        value: 2,
         styling: {
             objectcolor: '#ffbb0f',
             animationcolor: '#ffbb0f',
             animationcolor2: '#ffbb0f',
             wheelbg: '#999793',
-            opacity: 100,
+            opacity: 80,
             bgcolor: '#343a40',
             size: 5,
             speed: 2,
@@ -96,7 +97,8 @@ export default {
 </script>
 
 <style>
-.form,.test{
+.form,.test,.main{
+    margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
     background-color: lightblue;
     border-radius: 15px;
@@ -109,8 +111,9 @@ export default {
 }
 .inner
 {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     display: inline-block;
-    margin-left: 50px;
 }
 
 </style>
