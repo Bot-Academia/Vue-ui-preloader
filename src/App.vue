@@ -1,19 +1,27 @@
 <template>
   <div id="app" class="container">
 
-<!--    loaders-->
+<!--loaders-->
     <loader :styling="styling" :name="selected"></loader>
 
 
-<!--      formal-->
+                <div class="container jumbotron header">
+                    <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
+                    <br>
+                    <hr class="style-two">
+                    <br>
+                    <h1>Vue Pre-loader</h1>
+                    <br>
+                </div>
+<!--formal-->
     <div class="container main">
         <h2>Loader options</h2>
         <div id="outer">
-            <div class="inner"><button class="btn btn-primary" @click="loader('loader1')" >Spinner</button></div>
-            <div class="inner"><button class="btn btn-primary" @click="loader('dots')">Dots</button></div>
-            <div class="inner"><button class="btn btn-primary" @click="loader('toptombar')">Loading</button></div>
-            <div class="inner"><button class="btn btn-primary" @click="loader('circular')">circular</button></div>
-            <div class="inner"><button class="btn btn-primary" @click="loader('box')">Box</button></div>
+            <div class="inner"><button class="btn btn-danger" @click="loader('loader1')" >Spinner</button></div>
+            <div class="inner"><button class="btn btn-danger" @click="loader('dots')">Dots</button></div>
+            <div class="inner"><button class="btn btn-danger" @click="loader('toptombar')">Loading</button></div>
+            <div class="inner"><button class="btn btn-danger" @click="loader('circular')">circular</button></div>
+            <div class="inner"><button class="btn btn-danger" @click="loader('box')">Box</button></div>
         </div>
     </div>
 
@@ -97,12 +105,42 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+.header{
+  text-align: center;
+  border-radius: 15px !important;
+  box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.header h1{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#ui{
+  color: red;
+  font-size: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#topia{
+  color: blue;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 .form,.test,.main{
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
-    background-color: lightblue;
+    background-color: rgb(22, 51, 105);
     border-radius: 15px;
     box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
+    color: white;
 }
 #outer
 {
