@@ -49,7 +49,9 @@
       <div class="container form">
           <h4>Animation Color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelcolor">
-          {{styling.wheelcolor}}</h4>
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor">
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor2">
+          {{styling.wheelcolor}},{{styling.animationcolor}},{{styling.animationcolor2}}</h4>
           <h4>Background Color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.bgcolor">
           {{styling.bgcolor}}</h4>
@@ -97,6 +99,8 @@ export default {
         value: 5,
         styling: {
             wheelcolor: '#ffbb0f',
+            animationcolor: '#ffbb0f',
+            animationcolor2: '#ffbb0f',
             wheelbg: '#999793',
             opacity: 100,
             bgcolor: '#343a40',

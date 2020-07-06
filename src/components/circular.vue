@@ -16,6 +16,11 @@ export default {
         },
         created() {
             let root = document.documentElement;
+
+            root.style.setProperty('--color-animation1', this.styling.wheelcolor);
+            root.style.setProperty('--color-animation2', this.styling.animationcolor);
+            root.style.setProperty('--color-animation3', this.styling.animationcolor2);
+            root.style.setProperty('--border-size',this.styling.size+'px solid transparent');
             root.style.setProperty('--time-animation1', "spin-circular "+ (this.styling.speed-0.5)+"s linear infinite");
             root.style.setProperty('--time-animation2', "spin-circular "+ (this.styling.speed)+"s linear infinite");
             root.style.setProperty('--time-animation3', "spin-circular "+ (this.styling.speed+1.0)+"s linear infinite");
@@ -33,6 +38,14 @@ export default {
 </script>
 
 <style>
+
+:root{
+    --color-animation1: #9370DB;
+    --color-animation2: #9370DB;
+    --color-animation3: #9370DB;
+    --border-size: 3px solid transparent;
+}
+
   :root{
     --time-animation1: spin-circular 1.5s linear infinite;
     --time-animation2: spin-circular 2s linear infinite;
@@ -55,6 +68,10 @@ export default {
     height: 150px;
     margin: -75px 0 0 -75px;
     border-radius: 50%;
+    border: var(--border-size);
+    border-top-color: var(--color-animation1);
+    -webkit-animation: spin-circular 2s linear infinite;
+    animation: spin-circular 2s linear infinite;
     border: 3px solid transparent;
     border-top-color: #9370DB;
     -webkit-animation: var(--time-animation2);
@@ -68,6 +85,10 @@ export default {
     right: 5px;
     bottom: 5px;
     border-radius: 50%;
+    border: var(--border-size);
+    border-top-color: var(--color-animation2);
+    -webkit-animation: spin-circular 3s linear infinite;
+    animation: spin-circular 3s linear infinite;
     border: 3px solid transparent;
     border-top-color: #BA55D3;
     -webkit-animation: var(--time-animation3);
@@ -81,6 +102,10 @@ export default {
     right: 15px;
     bottom: 15px;
     border-radius: 50%;
+    border: var(--border-size);
+    border-top-color: var(--color-animation3);
+    -webkit-animation: spin-circular 1.5s linear infinite;
+    animation: spin-circular 1.5s linear infinite;
     border: 3px solid transparent;
     border-top-color: #FF00FF;
     -webkit-animation: var(--time-animation1);
