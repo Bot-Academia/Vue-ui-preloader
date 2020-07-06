@@ -2,7 +2,7 @@
     <div id="overlay-spinner" :style="{'background-color': bgcolors}">
 
 
-        <div class="loader-spinner" :style="{'border': styling.size + 'px solid ' + styling.wheelbg,'border-top': styling.size + 'px solid ' + styling.wheelcolor}"></div>
+        <div class="loader-spinner" :style="{'border': styling.size + 'px solid ' + styling.wheelbg,'border-top': styling.size + 'px solid ' + styling.objectcolor}"></div>
     </div>
 </template>
 

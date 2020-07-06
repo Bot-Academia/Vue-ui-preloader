@@ -1,6 +1,6 @@
 <template>
     <div id="overlay-dots" :style="{'background-color': bgcolors}">
-        <div class="loader-dots" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px'}"></div>
+        <div class="loader-dots" :style="{'color': styling.objectcolor,'font-size': styling.size+'px'}"></div>
     </div>
 </template>
 

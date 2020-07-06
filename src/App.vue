@@ -23,7 +23,7 @@
 <!--      props to be passed-->
       <div class="container form">
           <h4>Animation Color:
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelcolor">
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectcolor">
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor">
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor2">
           {{styling.wheelcolor}},{{styling.animationcolor}},{{styling.animationcolor2}}</h4>
@@ -69,7 +69,7 @@ export default {
       selected: '',
         value: 5,
         styling: {
-            wheelcolor: '#ffbb0f',
+            objectcolor: '#ffbb0f',
             animationcolor: '#ffbb0f',
             animationcolor2: '#ffbb0f',
             wheelbg: '#999793',

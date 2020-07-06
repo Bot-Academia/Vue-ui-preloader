@@ -1,6 +1,6 @@
 <template>
     <div id="overlay-box" :style="{'background-color': bgcolors}">
-        <div class="load-box" :style="{'background': styling.wheelcolor,'width': styling.size*20+'px','height': styling.size*20+'px'}">
+        <div class="load-box" :style="{'background': styling.objectcolor,'width': styling.size*20+'px','height': styling.size*20+'px'}">
         </div>
     </div>
 </template>
