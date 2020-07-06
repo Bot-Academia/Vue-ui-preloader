@@ -51,7 +51,7 @@
           <div class="mt-2">Size in pixel: {{ styling.size }}</div>
            <h4>Speed:</h4>
           <div>
-              <b-form-input id="range-1" v-model="styling.speed" type="range" min="0.1" max="10" step="0.5"></b-form-input>
+              <b-form-input id="range-1" v-model="styling.speed" type="range" min="0.1" max="10" step="0.1"></b-form-input>
               <div class="mt-2">Seconds: {{ styling.speed }}</div>
           </div>
       </div>
