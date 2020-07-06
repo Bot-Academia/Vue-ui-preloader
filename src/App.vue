@@ -111,7 +111,8 @@ export default {
       minibars: dots,
       toptombar: toptombar,
       circular: circular,
-      box: box
+      box: box,
+
   },
   methods: {
     loader(loader) {
