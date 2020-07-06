@@ -17,7 +17,7 @@ export default {
         created() {
             let root = document.documentElement;
             root.style.setProperty('--time-animation', "load " + this.styling.speed + "s infinite alternate ease-in-out");
-            root.style.setProperty('--color-bar',this.styling.wheelcolor);
+            root.style.setProperty('--color-bar',this.styling.wheelbg);
             var c;
             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
                 c= this.styling.bgcolor.substring(1).split('');
