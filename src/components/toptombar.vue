@@ -1,6 +1,6 @@
 <template>
-<div id="overlay" :style="{'background-color': bgcolors}">
-        <div class="loader" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px',}">Loading..</div>
+<div id="overlay-bar" :style="{'background-color': bgcolors}">
+        <div class="loader-bar" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px',}">Loading..</div>
     </div>
 </template>
 
@@ -15,6 +15,8 @@ export default {
             };
         },
         created() {
+            let root = document.documentElement;
+            root.style.setProperty('--time-animation', "load " + this.styling.speed + "s infinite alternate ease-in-out");
             var c;
             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
                 c= this.styling.bgcolor.substring(1).split('');
@@ -30,8 +32,11 @@ export default {
 </script>
 
 
-<style scoped>
- #overlay{
+<style>
+    :root{
+        --time-animation: load .7s infinite alternate ease-in-out;
+    }
+ #overlay-bar{
         background-color: rgba(52,58,64,1);
         height: 100%;
         width: 100%;
@@ -42,7 +47,7 @@ export default {
         bottom: 0;
         z-index:1000;
     }
-.loader{
+.loader-bar{
     width: 250px;
   height: 50px;
   line-height: 50px;
@@ -57,21 +62,21 @@ export default {
   letter-spacing: 0.2em;
   }
 
-  .loader:before, .loader:after {
+  .loader-bar:before, .loader-bar:after {
     content: "";
     display: block;
     width: 15px;
     height: 15px;
     background: #ce4233;
     position: absolute;
-    animation: load .7s infinite alternate ease-in-out;
+    animation: var(--time-animation);
   }
   
-  .loader:before {
+  .loader-bar:before {
     top: 0;
   }
   
-  .loader:after {
+  .loader-bar:after {
     bottom: 0;
   }
 

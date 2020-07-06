@@ -17,22 +17,17 @@
                   :styling="styling"
           ></toptombar>
       </div>
-      <br><br><br>
 
 <!--    selectors-->
+
+<!--      formal-->
     <div class="container">
         <h2>Loader options</h2>
-      <button class="btn btn-primary" @click="loader('loader1')">
-        Spinning Wheel
-      </button>
-        <br><br>
-        <button class="btn btn-primary" @click="loader('minibar')">
-            Mini Bar
-        </button>
-        <br><br>
-        <button class="btn btn-primary" @click="loader('toptombar')">
-            Top-tombar
-        </button>
+        <div id="outer">
+            <div class="inner"><button class="btn btn-primary" @click="loader('loader1')" >Spinner</button></div>
+            <div class="inner"><button class="btn btn-primary" @click="loader('minibar')">Dots</button></div>
+            <div class="inner"><button class="btn btn-primary" @click="loader('toptombar')">Loading</button></div>
+        </div>
     </div>
 
       <br><br><br>
@@ -54,9 +49,9 @@
           <h4>Size of animation:</h4>
           <b-form-input id="range-1" v-model="styling.size" type="range" min="0" max="30"></b-form-input>
           <div class="mt-2">Size in pixel: {{ styling.size }}</div>
-           <h2>Speed:</h2>
+           <h4>Speed:</h4>
           <div>
-              <b-form-input id="range-1" v-model="styling.speed" type="range" min="0" max="10"></b-form-input>
+              <b-form-input id="range-1" v-model="styling.speed" type="range" min="0.1" max="10" step="0.5"></b-form-input>
               <div class="mt-2">Seconds: {{ styling.speed }}</div>
           </div>
       </div>
@@ -114,8 +109,20 @@ export default {
 
 <style>
 .form,.test{
+    padding: 10px 10px 10px 10px;
     background-color: lightblue;
     border-radius: 15px;
     box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
 }
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+    margin-left: 50px;
+}
+
 </style>

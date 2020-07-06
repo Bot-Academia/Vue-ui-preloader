@@ -1,6 +1,6 @@
 <template>
-    <div id="overlay" :style="{'background-color': bgcolors}">
-        <div class="loader" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px'}"></div>
+    <div id="overlay-dots" :style="{'background-color': bgcolors}">
+        <div class="loader-dots" :style="{'color': styling.wheelcolor,'font-size': styling.size+'px'}"></div>
     </div>
 </template>
 
@@ -15,6 +15,8 @@
             };
         },
         created() {
+            let root = document.documentElement;
+            root.style.setProperty('--time-animation', "load7 " + this.styling.speed + "s infinite ease-in-out");
             var c;
             if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
                 c= this.styling.bgcolor.substring(1).split('');
@@ -28,8 +30,11 @@
     }
 </script>
 
-<style scoped>
-    #overlay{
+<style >
+    :root{
+        --time-animation: load7 0.7s infinite ease-in-out;
+    }
+    #overlay-dots{
         background-color: rgba(52,58,64,1);
         height: 100%;
         width: 100%;
@@ -40,18 +45,18 @@
         bottom: 0;
         z-index:1000;
     }
-    .loader,
-    .loader:before,
-    .loader:after {
+    .loader-dots,
+    .loader-dots:before,
+    .loader-dots:after {
         border-radius: 50%;
         width: 2.5em;
         height: 2.5em;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
-        -webkit-animation: load7 1.8s infinite ease-in-out;
-        animation: load7 1.8s infinite ease-in-out;
+        -webkit-animation: var(--time-animation);
+        animation: var(--time-animation);
     }
-    .loader {
+    .loader-dots {
         color: black;
         font-size: 10px;
         position: absolute;
@@ -68,18 +73,18 @@
         -webkit-animation-delay: -0.16s;
         animation-delay: -0.16s;
     }
-    .loader:before,
-    .loader:after {
+    .loader-dots:before,
+    .loader-dots:after {
         content: '';
         position: absolute;
         top: 0;
     }
-    .loader:before {
+    .loader-dots:before {
         left: -3.5em;
         -webkit-animation-delay: -0.32s;
         animation-delay: -0.32s;
     }
-    .loader:after {
+    .loader-dots:after {
         left: 3.5em;
     }
     @-webkit-keyframes load7 {
