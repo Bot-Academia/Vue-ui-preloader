@@ -14,6 +14,18 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
+  ,
+  "keywords": [
+    "vuejs",
+    "preloader",
+    "loader",
+    "spinner",
+    "loading"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bot-Academia/Vue-preLoader.git"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
