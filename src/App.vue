@@ -15,19 +15,19 @@
                 <div class="container header">
                     <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
                     <hr class="style-two">
-                    <h1>Vue Pre-loader</h1>
+                    <h1>Vue Pre-Loader</h1>
                 </div>
 <!--formal-->
       <div class="container">
           <div class="row">
               <div class="col-sm">
                   <div class="container main">
-                      <h2>Loader options</h2>
+                      <h2>Pre-Loaders</h2>
                       <div id="outer">
-                          <div class="inner"><button class="btn btn-danger" @click="loader('loader1')" >Spinner</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('spinning')" >Spinner</button></div>
                           <div class="inner"><button class="btn btn-danger" @click="loader('dots')">Dots</button></div>
-                          <div class="inner"><button class="btn btn-danger" @click="loader('toptombar')">Loading</button></div>
-                          <div class="inner"><button class="btn btn-danger" @click="loader('circular')">circular</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('loading')">Loading</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('circular')">Circular</button></div>
                           <div class="inner"><button class="btn btn-danger" @click="loader('box')">Box</button></div>
                       </div>
                   </div>
@@ -49,29 +49,29 @@
 
 <!--      props to be passed-->
       <div class="container form">
-          <h4>Animation Color:
+          <h4>Object color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectcolor">
           {{styling.objectcolor}}</h4>
-          <h4> Additional Color selector:
+          <h4> Additional color options:</h4>
+          <h5> Color1:
               <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor">
+              {{styling.animationcolor}}</h5>
+          <h5> Color2:
               <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.animationcolor2">
-              {{styling.animationcolor}},{{styling.animationcolor2}}</h4>
-          <h4>Background Color:
+              {{styling.animationcolor2}}</h5>
+          <h4>Background color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.bgcolor">
           {{styling.bgcolor}}</h4>
-          <h4>Animation Background Color:
+          <h4>Object bg color:
               <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectbg">
               {{styling.objectbg}}</h4>
-          <h4>Background Color opacity:</h4>
+          <h4>Background color opacity: {{ styling.opacity }}%</h4>
           <b-form-input id="range-1" v-model="styling.opacity" type="range" min="0" max="100"></b-form-input>
-          <div class="mt-2">Opacity-percentage: {{ styling.opacity }}</div>
-          <h4>Size of animation:</h4>
+          <h4>Size of animation: {{ styling.size }}px</h4>
           <b-form-input id="range-1" v-model="styling.size" type="range" min="0" max="30"></b-form-input>
-          <div class="mt-2">Size in pixel: {{ styling.size }}</div>
-           <h4>Speed:</h4>
+           <h4>Speed: {{ styling.speed }}s</h4>
           <div>
               <b-form-input id="range-1" v-model="styling.speed" type="range" min="0.1" max="10" step="0.1"></b-form-input>
-              <div class="mt-2">Seconds: {{ styling.speed }}</div>
           </div>
       </div>
 
@@ -120,7 +120,7 @@ export default {
   methods: {
     loader(loader) {
       this.selected=loader;
-      this.code=`<loader object="${this.styling.objectcolor}"color1="${this.styling.animationcolor}"color2="${this.styling.animationcolor2}"size="${this.styling.size}"speed="${this.styling.speed}"bg="${this.styling.bgcolor}"objectbg="${this.styling.objectbg}"opacity="${this.styling.opacity}"name="${this.selected}"></loader>`
+      this.code=`<loader object="${this.styling.objectcolor}" color1="${this.styling.animationcolor}" color2="${this.styling.animationcolor2}" size="${this.styling.size}" speed="${this.styling.speed}" bg="${this.styling.bgcolor}" objectbg="${this.styling.objectbg}" opacity="${this.styling.opacity}" name="${this.selected}"></loader>`
       setTimeout(() => {
         this.selected='';
       }, this.value*1000);
