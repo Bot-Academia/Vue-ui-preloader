@@ -7,25 +7,38 @@
 
                 <div class="container jumbotron header">
                     <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
-                    <br>
                     <hr class="style-two">
-                    <br>
                     <h1>Vue Pre-loader</h1>
-                    <br>
                 </div>
 <!--formal-->
-    <div class="container main">
-        <h2>Loader options</h2>
-        <div id="outer">
-            <div class="inner"><button class="btn btn-danger" @click="loader('loader1')" >Spinner</button></div>
-            <div class="inner"><button class="btn btn-danger" @click="loader('dots')">Dots</button></div>
-            <div class="inner"><button class="btn btn-danger" @click="loader('toptombar')">Loading</button></div>
-            <div class="inner"><button class="btn btn-danger" @click="loader('circular')">circular</button></div>
-            <div class="inner"><button class="btn btn-danger" @click="loader('box')">Box</button></div>
-        </div>
-    </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm">
+                  <div class="container main">
+                      <h2>Loader options</h2>
+                      <div id="outer">
+                          <div class="inner"><button class="btn btn-danger" @click="loader('loader1')" >Spinner</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('dots')">Dots</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('toptombar')">Loading</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('circular')">circular</button></div>
+                          <div class="inner"><button class="btn btn-danger" @click="loader('box')">Box</button></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm">
+                  <div class="container test">
+                      <h2>Test Duration:</h2>
+                      <div>
+                          <b-form-input id="range-1" v-model="value" type="range" min="0" max="10"></b-form-input>
+                          <div class="mt-2">Seconds: {{ value }}</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-      <br><br><br>
+
+
 
 <!--      props to be passed-->
       <div class="container form">
@@ -54,17 +67,6 @@
               <div class="mt-2">Seconds: {{ styling.speed }}</div>
           </div>
       </div>
-
-      <br><br><br>
-
-      <div class="container test">
-          <h2>Test Duration:</h2>
-          <div>
-              <b-form-input id="range-1" v-model="value" type="range" min="0" max="10"></b-form-input>
-              <div class="mt-2">Seconds: {{ value }}</div>
-          </div>
-      </div>
-
   </div>
 </template>
 
