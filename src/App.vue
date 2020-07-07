@@ -49,6 +49,7 @@
 
 <!--      props to be passed-->
       <div class="container form">
+          <h1>PlayGround</h1>
           <h4>Object color:
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectcolor">
           {{styling.objectcolor}}</h4>
@@ -136,12 +137,16 @@ export default {
   box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
   background-color: rgb(255, 255, 255) !important;
 }
-
+h1{
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    border-bottom: 1px dashed white;
+}
 .header h1{
   font-family: 'Noto Sans', sans-serif;
     margin: 10px 10px 10px 10px;
 }
-
 #ui{
   color: red;
   font-size: 50px;
