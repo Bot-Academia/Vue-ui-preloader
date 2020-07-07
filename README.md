@@ -7,6 +7,8 @@
 [![NPM Package](https://img.shields.io/npm/v/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader) 
 [![NPM Downloads](https://img.shields.io/npm/dm/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader)
 
+[![NPM](https://nodei.co/npm/vue-ui-preloader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-ui-preloader/)
+
 ## Demo and playground
 Live demo - https://vue-preloader.netlify.app/
 
