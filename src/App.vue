@@ -54,8 +54,15 @@
               <div class="mt-2">Seconds: {{ styling.speed }}</div>
           </div>
       </div>
+      <br>
 
-      <br><br><br>
+      <b-form-textarea
+      id="textarea"
+      v-model="code"
+      rows="3"
+       ></b-form-textarea>
+
+      <br><br>
 
       <div class="container test">
           <h2>Test Duration:</h2>
@@ -87,6 +94,7 @@ export default {
             size: 5,
             speed: 2,
         },
+        code: `<loader :styling="styling" :name="${this.selected}"></loader>`
     };
   },
   name: 'App',
@@ -96,6 +104,7 @@ export default {
   methods: {
     loader(loader) {
       this.selected=loader;
+      this.code=`<loader :styling="styling" :name="${this.selected}"></loader>`
       setTimeout(() => {
         this.selected='';
       }, this.value*1000);
@@ -141,6 +150,12 @@ hr.style-two {
     border-radius: 15px;
     box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
     color: white;
+}
+
+#textarea{
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
 }
 #outer
 {
