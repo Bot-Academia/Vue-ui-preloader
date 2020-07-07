@@ -77,11 +77,12 @@
 
       <br>
 
-      <b-form-textarea
+   <div class="container"><b-form-textarea
       id="textarea"
       v-model="code"
       rows="3"
-       ></b-form-textarea>
+      placeholder="Your code goes here"
+       ></b-form-textarea></div>
 
       <br>
 
