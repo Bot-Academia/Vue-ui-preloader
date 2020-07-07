@@ -76,15 +76,8 @@
       rows="3"
        ></b-form-textarea>
 
-      <br><br>
+      <br>
 
-      <div class="container test">
-          <h2>Test Duration:</h2>
-          <div>
-              <b-form-input id="range-1" v-model="value" type="range" min="0" max="10"></b-form-input>
-              <div class="mt-2">Seconds: {{ value }}</div>
-          </div>
-      </div>
 
 
   </div>
