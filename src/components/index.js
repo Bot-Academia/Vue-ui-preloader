@@ -1,11 +1,11 @@
 // Import vue component
-import vue-ui-loader from './loader.vue';
+import {Uiloader} from './loader.vue';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('loader', vue-ui-loader);
+	Vue.component('loader',Uiloader);
 }
 
 // Create module definition for Vue.use()
@@ -25,4 +25,4 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default {vue-ui-loader};
+export default {Uiloader};
