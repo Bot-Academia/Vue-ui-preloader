@@ -4,7 +4,6 @@
 <!--loaders-->
     <loader :styling="styling" :name="selected"></loader>
 
-
                 <div class="container jumbotron header">
                     <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
                     <hr class="style-two">
