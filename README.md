@@ -30,7 +30,6 @@ npm install --save vue-ui-preloader
 
 In your main.js
 ```js
-import Vue from 'vue'
 import loader from "vue-ui-preloader";
 
 Vue.use(loader);
