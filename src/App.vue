@@ -109,7 +109,7 @@ export default {
             size: 5,
             speed: 2,
         },
-        code: `<loader :styling="styling" :name="${this.selected}"></loader>`
+        code: ``,
     };
   },
   name: 'App',
@@ -119,7 +119,7 @@ export default {
   methods: {
     loader(loader) {
       this.selected=loader;
-      this.code=`<loader :styling="styling" :name="${this.selected}"></loader>`
+      this.code=`<loader object="${this.styling.objectcolor}"color1="${this.styling.animationcolor}"color2="${this.styling.animationcolor2}"size="${this.styling.size}"speed="${this.styling.speed}"bg="${this.styling.bgcolor}"objectbg="${this.styling.objectbg}"opacity="${this.styling.opacity}"name="${this.selected}"></loader>`
       setTimeout(() => {
         this.selected='';
       }, this.value*1000);
