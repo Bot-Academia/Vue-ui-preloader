@@ -1,5 +1,5 @@
 module.exports = {
-	publicPath: '/vue-ui-preloader/',
+// 	publicPath: '/vue-ui-preloader/',
 	configureWebpack: {
 		output: {
 			libraryExport: 'default'
