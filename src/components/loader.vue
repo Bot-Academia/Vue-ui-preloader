@@ -1,6 +1,14 @@
 <template>
 <div>
-     <component :is="name" :styling="styling"></component>
+     <component :is="name"
+                :object="object"
+                :color1="color1"
+                :color2="color2"
+                :size="size"
+                :speed="speed"
+                :bg="bg"
+                :objectbg="objectbg"
+                :opacity="opacity"></component>
 </div> 
 </template>
 
@@ -18,7 +26,7 @@ export default {
         toptombar : toptombar,
         box: box,
     },
-    props:['name','styling'],
+     props: ['object','color1','color2','size','speed','opacity','bg','objectbg','name'],
 }
 </script>
 

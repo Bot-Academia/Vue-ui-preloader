@@ -7,7 +7,7 @@
 <script>
 export default {
      name: "circular",
-        props: ['styling'],
+        props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
         data() {
             return{
                 bgcolors: ''
@@ -17,21 +17,21 @@ export default {
         created() {
             let root = document.documentElement;
 
-            root.style.setProperty('--color-animation1', this.styling.objectcolor);
-            root.style.setProperty('--color-animation2', this.styling.animationcolor);
-            root.style.setProperty('--color-animation3', this.styling.animationcolor2);
-            root.style.setProperty('--border-size',this.styling.size+'px solid transparent');
-            root.style.setProperty('--time-animation1', "spin-circular "+ (this.styling.speed-0.5)+"s linear infinite");
-            root.style.setProperty('--time-animation2', "spin-circular "+ (this.styling.speed)+"s linear infinite");
-            root.style.setProperty('--time-animation3', "spin-circular "+ (this.styling.speed+1.0)+"s linear infinite");
+            root.style.setProperty('--color-animation1', this.object);
+            root.style.setProperty('--color-animation2', this.color1);
+            root.style.setProperty('--color-animation3', this.color2);
+            root.style.setProperty('--border-size',this.size+'px solid transparent');
+            root.style.setProperty('--time-animation1', "spin-circular "+ (this.speed-0.5)+"s linear infinite");
+            root.style.setProperty('--time-animation2', "spin-circular "+ (this.speed)+"s linear infinite");
+            root.style.setProperty('--time-animation3', "spin-circular "+ (this.speed+1.0)+"s linear infinite");
             var c;
-            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
-                c= this.styling.bgcolor.substring(1).split('');
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.bg)){
+                c= this.bg.substring(1).split('');
                 if(c.length== 3){
                     c= [c[0], c[0], c[1], c[1], c[2], c[2]];
                 }
                 c= '0x'+c.join('');
-                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.styling.opacity/100 +')';
+                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
         }
 }

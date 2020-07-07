@@ -2,7 +2,15 @@
   <div id="app" class="container">
 
 <!--loaders-->
-    <loader :styling="styling" :name="selected"></loader>
+    <loader :object="styling.objectcolor"
+            :color1="styling.animationcolor"
+            :color2="styling.animationcolor2"
+            :size="styling.size"
+            :speed="styling.speed"
+            :bg="styling.bgcolor"
+            :objectbg="styling.objectbg"
+            :opacity="styling.opacity"
+            :name="selected"></loader>
 
                 <div class="container jumbotron header">
                     <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
@@ -52,8 +60,8 @@
           <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.bgcolor">
           {{styling.bgcolor}}</h4>
           <h4>Animation Background Color:
-              <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.wheelbg">
-              {{styling.wheelbg}}</h4>
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectbg">
+              {{styling.objectbg}}</h4>
           <h4>Background Color opacity:</h4>
           <b-form-input id="range-1" v-model="styling.opacity" type="range" min="0" max="100"></b-form-input>
           <div class="mt-2">Opacity-percentage: {{ styling.opacity }}</div>
@@ -92,10 +100,10 @@ export default {
       selected: '',
         value: 2,
         styling: {
-            objectcolor: '#ffbb0f',
-            animationcolor: '#ffbb0f',
-            animationcolor2: '#ffbb0f',
-            wheelbg: '#999793',
+            objectcolor: '#ff9633',
+            animationcolor: '#ffffff',
+            animationcolor2: '#17fd3d',
+            objectbg: '#999793',
             opacity: 80,
             bgcolor: '#343a40',
             size: 5,

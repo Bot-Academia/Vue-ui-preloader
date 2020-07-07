@@ -2,14 +2,14 @@
     <div id="overlay-spinner" :style="{'background-color': bgcolors}">
 
 
-        <div class="loader-spinner" :style="{'border': styling.size + 'px solid ' + styling.wheelbg,'border-top': styling.size + 'px solid ' + styling.objectcolor}"></div>
+        <div class="loader-spinner" :style="{'border': size + 'px solid ' + objectbg,'border-top': size + 'px solid ' + object}"></div>
     </div>
 </template>
 
 <script>
     export default {
         name: "static-loader",
-        props: ['styling'],
+        props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
         data() {
             return{
                 bgcolors: ''
@@ -18,17 +18,17 @@
         },
         created() {
             let root = document.documentElement;
-            root.style.setProperty('--time-animation', "spin "+ this.styling.speed + "s linear infinite");
+            root.style.setProperty('--time-animation', "spin "+ this.speed + "s linear infinite");
             var c;
-            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
-                c= this.styling.bgcolor.substring(1).split('');
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.bg)){
+                c= this.bg.substring(1).split('');
                 if(c.length== 3){
                     c= [c[0], c[0], c[1], c[1], c[2], c[2]];
                 }
                 c= '0x'+c.join('');
-                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.styling.opacity/100 +')';
+                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
-            console.log(this.styling.speed);
+            console.log(this.speed);
         }
     }
 </script>

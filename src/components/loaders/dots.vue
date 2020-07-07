@@ -1,13 +1,13 @@
 <template>
     <div id="overlay-dots" :style="{'background-color': bgcolors}">
-        <div class="loader-dots" :style="{'color': styling.objectcolor,'font-size': styling.size+'px'}"></div>
+        <div class="loader-dots" :style="{'color': object,'font-size': size+'px'}"></div>
     </div>
 </template>
 
 <script>
     export default {
         name: "dots",
-        props: ['styling'],
+        props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
         data() {
             return{
                 bgcolors: ''
@@ -16,15 +16,15 @@
         },
         created() {
             let root = document.documentElement;
-            root.style.setProperty('--time-animation', "load7 " + this.styling.speed + "s infinite ease-in-out");
+            root.style.setProperty('--time-animation', "load7 " + this.speed + "s infinite ease-in-out");
             var c;
-            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
-                c= this.styling.bgcolor.substring(1).split('');
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.bg)){
+                c= this.bg.substring(1).split('');
                 if(c.length== 3){
                     c= [c[0], c[0], c[1], c[1], c[2], c[2]];
                 }
                 c= '0x'+c.join('');
-                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.styling.opacity/100 +')';
+                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
         }
     }
