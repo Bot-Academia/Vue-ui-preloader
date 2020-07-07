@@ -12,7 +12,7 @@
             :opacity="styling.opacity"
             :name="selected"></loader>
 
-                <div class="container jumbotron header">
+                <div class="container header">
                     <h1><b><span id="ui">UI</span><span id="topia">topia</span></b></h1>
                     <hr class="style-two">
                     <h1>Vue Pre-loader</h1>
@@ -139,6 +139,7 @@ export default {
 
 .header h1{
   font-family: 'Noto Sans', sans-serif;
+    margin: 10px 10px 10px 10px;
 }
 
 #ui{
@@ -180,7 +181,6 @@ hr.style-two {
 .inner
 {
     margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
     display: inline-block;
 }
 
