@@ -1,13 +1,13 @@
 <template>
 <div id="overlay-bar" :style="{'background-color': bgcolors}">
-        <div class="loader-bar" :style="{'color': styling.objectcolor,'font-size': styling.size+'px',}">Loading..</div>
+        <div class="loader-bar" :style="{'color': object,'font-size': size+'px',}">Loading..</div>
     </div>
 </template>
 
 <script>
 export default {
      name: "toptombar",
-        props: ['styling'],
+    props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
         data() {
             return{
                 bgcolors: ''
@@ -16,16 +16,16 @@ export default {
         },
         created() {
             let root = document.documentElement;
-            root.style.setProperty('--time-animation', "load " + this.styling.speed + "s infinite alternate ease-in-out");
-            root.style.setProperty('--color-bar',this.styling.wheelbg);
+            root.style.setProperty('--time-animation', "load " + this.speed + "s infinite alternate ease-in-out");
+            root.style.setProperty('--color-bar',this.objectbg);
             var c;
-            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.styling.bgcolor)){
-                c= this.styling.bgcolor.substring(1).split('');
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(this.bg)){
+                c= this.bg.substring(1).split('');
                 if(c.length== 3){
                     c= [c[0], c[0], c[1], c[1], c[2], c[2]];
                 }
                 c= '0x'+c.join('');
-                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.styling.opacity/100 +')';
+                this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
         }
     
