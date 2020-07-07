@@ -82,7 +82,7 @@
       id="textarea"
       v-model="code"
       rows="3"
-      placeholder="Your code goes here"
+      placeholder="Your code snippet will be displayed here after you select Pre-Loader"
        ></b-form-textarea></div>
 
       <br>
