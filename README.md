@@ -47,7 +47,7 @@ In your template
 ## Props
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| name | string | 'spinner' | decides the type of loader |
+| name | string | 'spinning' | decides the type of loader |
 | object | string | '#ff9633' | set the color of the loaders. hex or color |
 | color1 | string | only for circular | set the color of the circular loader disk1. hex or color |
 | color2 | string | only for circular | set the color of the circular loader disk2. hex or color |
