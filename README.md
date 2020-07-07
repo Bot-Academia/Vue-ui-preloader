@@ -12,9 +12,9 @@ Adjust the settings using the playground options. On the bottom of the page you 
 
 ```bash
 # use yarn
-yarn add 
+yarn add vue-ui-preloader
 # use npm
-npm install --save 
+npm install --save vue-ui-preloader
 ```
 
 ## Usage
@@ -22,8 +22,9 @@ npm install --save
 In your main.js
 ```js
 import Vue from 'vue'
+import loader from "vue-ui-preloader";
 
-
+Vue.use(loader);
 ```
 
 In your template
