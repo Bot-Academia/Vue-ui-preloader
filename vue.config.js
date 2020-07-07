@@ -1,10 +1,8 @@
 module.exports = {
-    css: {
-        extract: false
-    },
-    configureWebpack: {
-        output: {
-            libraryExport: 'default'
-        }
-    }
+	publicPath: '/vue-ui-preloader/',
+	configureWebpack: {
+		output: {
+			libraryExport: 'default'
+		}
+	}
 }

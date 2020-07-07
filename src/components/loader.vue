@@ -19,6 +19,7 @@ import circular from "./loaders/circular";
 import toptombar from "./loaders/toptombar";
 import box from "./loaders/box";
 export default {
+    name: 'loader',
     components:{
         spinning: loader1,
         dots: dots,

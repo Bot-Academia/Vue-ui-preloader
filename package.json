@@ -1,12 +1,12 @@
 {
-  "name": "vue-ui-loader",
-  "version": "1.0.0",
+  "name": "vue-ui-preloader",
+  "version": "1.0.10",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name vue-ui-loader ./src/components/index.js"
+    "build-bundle": "vue-cli-service build --target lib --name loader ./src/components/loader.vue"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -34,7 +34,8 @@
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "main": "./dist/vue-ui-loader.common.js",
+  "main": "./src/components/index.js",
+  "unpkg": "dist/loader.umd.min.js",
   "license": "MIT",
   "eslintConfig": {
     "root": true,
@@ -56,7 +57,9 @@
     "not dead"
   ],
   "files": [
-    "dist/vue-ui-loader.common.js",
-    "dist/vue-ui-loader.umd.js"
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
   ]
 }
