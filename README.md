@@ -1,5 +1,6 @@
 ![chrome_54Uk8Qpx8p](https://user-images.githubusercontent.com/54861487/86740454-4a074e00-c054-11ea-8d35-ddcb438982e7.png)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/52e8f8d3a38e4c8ab3a2539ecfd88b5b)](https://app.codacy.com/gh/Bot-Academia/Vue-ui-preloader?utm_source=github.com&utm_medium=referral&utm_content=Bot-Academia/Vue-ui-preloader&utm_campaign=Badge_Grade_Dashboard)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f88fe30e-103a-4157-8ead-30de668b037c/deploy-status)](https://app.netlify.com/sites/vue-preloader/deploys)
 
 [![Language](https://img.shields.io/badge/language-vue-green.svg)](https://img.shields.io/badge/language-vue-green.svg)
