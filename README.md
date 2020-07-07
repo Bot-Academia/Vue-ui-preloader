@@ -13,6 +13,8 @@ Live demo - https://vue-preloader.netlify.app/
 [Playground Website](https://vue-preloader.netlify.app/).
 Adjust the settings using the playground options. On the bottom of the page you will find the source code that you can directly use in your project or you can manually change the props.
 
+npm link - https://www.npmjs.com/package/vue-ui-preloader
+
 ## Installation
 
 ```bash
