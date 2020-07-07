@@ -3,6 +3,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f88fe30e-103a-4157-8ead-30de668b037c/deploy-status)](https://app.netlify.com/sites/vue-preloader/deploys)
 
 ## Demo and playground
+Live demo - https://vue-preloader.netlify.app/
+
 [Playground Website](https://vue-preloader.netlify.app/).
 Adjust the settings using the playground options. On the bottom of the page you will find the source code that you can directly use in your project or you can manually change the props.
 
@@ -54,4 +56,8 @@ In your template
 | objectbg | string | '#999793' | set the color of the loader object background. hex or color |
 | opacity | number | 80 | set the opacity of background |
 
+## Author
+
+&#169; [Vinayak sharma](https://github.com/vinayaksh42)
+ [Hrishikesh Agarwal](https://github.com/codetheorem)
 
