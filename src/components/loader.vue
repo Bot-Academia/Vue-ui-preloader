@@ -20,10 +20,10 @@ import toptombar from "./loaders/toptombar";
 import box from "./loaders/box";
 export default {
     components:{
-        loader1: loader1,
+        spinning: loader1,
         dots: dots,
         circular : circular,
-        toptombar : toptombar,
+        loading : toptombar,
         box: box,
     },
      props: ['object','color1','color2','size','speed','opacity','bg','objectbg','name'],
