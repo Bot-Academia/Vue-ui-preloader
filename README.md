@@ -39,20 +39,40 @@ Vue.use(loader);
 In your template
 ```vue
 <template>
-  <loader object="#ff7b00" 
-    color1="#ffffff" 
-    color2="#17fd3d" 
-    size="5" 
-    speed="2" 
-    bg="#343a40" 
-    objectbg="#999793" 
-    opacity="100" 
-    name="circular">
-  </loader>
+  <loader object="#ff9633" color1="#ffffff" color2="#17fd3d" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
 </template>
 ```
 
 >note(you can either use the [playground](https://vue-preloader.netlify.app/) website to automatically get all the props set or you can set them manaully using the below prop list. You can also resort to not passing any prop, in this case the preloader will use default settings.)
+
+## Via CDN
+
+CDN demo link - http://jsfiddle.net/Ltfrmk0e/13/
+
+In your index.html
+```html
+<script src="https://unpkg.com/vue-ui-preloader"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader@1.0.13/dist/loader.css">
+```
+
+In your template
+```html
+<div id="app">
+  <loader object="#ff9633" color1="#ffffff" color2="#17fd3d" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
+</div>
+```
+
+In your main.js
+```js
+Vue.use(loader)
+
+new Vue({
+  el: '#app',
+  components:{
+  loader:loader
+  }
+});
+```
 
 ## Props
 | Name | Type | Default | Description |
