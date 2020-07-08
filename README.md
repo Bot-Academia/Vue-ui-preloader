@@ -1,11 +1,14 @@
 ![chrome_54Uk8Qpx8p](https://user-images.githubusercontent.com/54861487/86740454-4a074e00-c054-11ea-8d35-ddcb438982e7.png)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/52e8f8d3a38e4c8ab3a2539ecfd88b5b)](https://app.codacy.com/gh/Bot-Academia/Vue-ui-preloader?utm_source=github.com&utm_medium=referral&utm_content=Bot-Academia/Vue-ui-preloader&utm_campaign=Badge_Grade_Dashboard)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f88fe30e-103a-4157-8ead-30de668b037c/deploy-status)](https://app.netlify.com/sites/vue-preloader/deploys)
 
 [![Language](https://img.shields.io/badge/language-vue-green.svg)](https://img.shields.io/badge/language-vue-green.svg)
 [![License](https://img.shields.io/badge/license-MIT-000000.svg)](https://img.shields.io/badge/license-MIT-000000.svg)
 [![NPM Package](https://img.shields.io/npm/v/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader) 
 [![NPM Downloads](https://img.shields.io/npm/dm/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader)
+
+[![NPM](https://nodei.co/npm/vue-ui-preloader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-ui-preloader/)
 
 ## Demo and playground
 Live demo - https://vue-preloader.netlify.app/
@@ -28,7 +31,6 @@ npm install --save vue-ui-preloader
 
 In your main.js
 ```js
-import Vue from 'vue'
 import loader from "vue-ui-preloader";
 
 Vue.use(loader);

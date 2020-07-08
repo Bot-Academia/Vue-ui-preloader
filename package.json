@@ -1,6 +1,6 @@
 {
   "name": "vue-ui-preloader",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bot-Academia/Vue-preLoader.git"
+    "url": "git+https://github.com/Bot-Academia/Vue-ui-preloader.git"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
