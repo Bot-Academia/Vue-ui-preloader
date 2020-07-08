@@ -47,7 +47,7 @@ In your template
 
 ## Via CDN
 
-CDN demo link - http://jsfiddle.net/Ltfrmk0e/13/
+CDN demo link - http://jsfiddle.net/8961cm0s/1/
 
 In your index.html
 ```html
