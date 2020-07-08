@@ -52,7 +52,7 @@ CDN demo link - http://jsfiddle.net/8961cm0s/1/
 In your index.html
 ```html
 <script src="https://unpkg.com/vue-ui-preloader"></script>
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader@1.0.13/dist/loader.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader/dist/loader.css">
 ```
 
 In your template
