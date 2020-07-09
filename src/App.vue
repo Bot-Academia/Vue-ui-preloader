@@ -158,7 +158,8 @@ h1{
   font-family: 'Noto Sans', sans-serif;
 }
 .form{
-    margin: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 20px 20px 20px 20px;
     background-color: rgb(75, 106, 163);
     border-radius: 15px;
@@ -174,7 +175,6 @@ h1{
 {
     width:100%;
     text-align: center;
-    margin: 20px 20px 20px 20px;
 }
 .inner
 {
@@ -189,6 +189,7 @@ h1{
         color: lightyellow;
         font-size: 24px;
         font-weight: bold;
+        text-align: center;
     }
 .fade-enter {
     opacity: 0;
