@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-000000.svg)](https://img.shields.io/badge/license-MIT-000000.svg)
 [![NPM Package](https://img.shields.io/npm/v/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader) 
 [![NPM Downloads](https://img.shields.io/npm/dm/vue-ui-preloader.svg)](https://www.npmjs.com/package/vue-ui-preloader)
-	<a href="https://github.com/vuejs/awesome-vue"><img src="https://awesome.re/mentioned-badge.svg" alt="Mentioned in Awesome-Vue" /></a>
+	<a href="https://github.com/vuejs/awesome-vue#loader"><img src="https://awesome.re/mentioned-badge.svg" alt="Mentioned in Awesome-Vue" /></a>
 [![](https://data.jsdelivr.com/v1/package/npm/vue-ui-preloader/badge)](https://www.jsdelivr.com/package/npm/vue-ui-preloader)
 
 [![NPM](https://nodei.co/npm/vue-ui-preloader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-ui-preloader/)
