@@ -13,7 +13,7 @@
 [![NPM](https://nodei.co/npm/vue-ui-preloader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-ui-preloader/)
 
 ## Demo and playground
-Live demo - https://vue-preloader.netlify.app/
+Live demo -  https://vue-preloader.netlify.app/
 
 [Playground Website](https://vue-preloader.netlify.app/).
 Adjust the settings using the playground options. On the bottom of the page you will find the source code that you can directly use in your project or you can manually change the props.
