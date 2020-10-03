@@ -5,9 +5,12 @@
 </template>
 
 <script>
+    import overflowMixin from '@/mixins/overflow';
+
     export default {
         name: "dots",
-        props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
+        props: ['object','color1','color2','size','speed','opacity','bg','objectbg','disableScrolling'],
+        mixins: [overflowMixin],
         data() {
             return{
                 bgcolors: ''

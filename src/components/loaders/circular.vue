@@ -5,9 +5,12 @@
 </template>
 
 <script>
-export default {
-     name: "circular",
-        props: ['object','color1','color2','size','speed','opacity','bg','objectbg'],
+    import overflowMixin from '@/mixins/overflow';
+
+    export default {
+        name: "circular",
+        props: ['object','color1','color2','size','speed','opacity','bg','objectbg','disableScrolling'],
+        mixins: [overflowMixin],
         data() {
             return{
                 bgcolors: ''
@@ -34,7 +37,7 @@ export default {
                 this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
         }
-}
+    }
 </script>
 
 <style>
