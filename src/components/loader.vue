@@ -8,7 +8,8 @@
                 :speed="speed"
                 :bg="bg"
                 :objectbg="objectbg"
-                :opacity="opacity"></component>
+                :opacity="opacity"
+                :disableScrolling="disableScrolling"></component>
 </div> 
 </template>
 
@@ -27,10 +28,12 @@ export default {
         loading : toptombar,
         box: box,
     },
-     props: ['object','color1','color2','size','speed','opacity','bg','objectbg','name'],
+    props: ['object','color1','color2','size','speed','opacity','bg','objectbg','name','disableScrolling'],
 }
 </script>
 
-<style scoped>
-
+<style>
+    body.overflowHidden {
+        overflow: hidden !important;
+    }
 </style>

@@ -8,7 +8,8 @@
             :bg="styling.bgcolor"
             :objectbg="styling.objectbg"
             :opacity="styling.opacity"
-            :name="selected"></loader>
+            :name="selected"
+            :disableScrolling="styling.disableScrolling"></loader>
 
       <div class="row justify-content-md-center">
           <div class="col-md-auto">
@@ -40,6 +41,9 @@
                   <h5>Object bg color:
                       <input type="color" id="favcolor" name="favcolor" value="#ff0000" v-model="styling.objectbg">
                       {{styling.objectbg}}</h5>
+                  <h5>Disable page scrolling:
+                      <input type="checkbox" id="favcolor" name="pageScrollingDisabled" v-model="styling.disableScrolling">
+                      {{styling.disableScrolling}}</h5>
               </div>
               <div class="col-sm">
                   <h5>Background color opacity: {{ styling.opacity }}%</h5>
@@ -112,6 +116,7 @@ export default {
             bgcolor: '#343a40',
             size: 5,
             speed: 2,
+            disableScrolling: false,
         },
         code: ``,
         flag: false
@@ -124,7 +129,7 @@ export default {
   methods: {
     loader(loader) {
       this.selected=loader;
-      this.code=`<loader object="${this.styling.objectcolor}" color1="${this.styling.animationcolor}" color2="${this.styling.animationcolor2}" size="${this.styling.size}" speed="${this.styling.speed}" bg="${this.styling.bgcolor}" objectbg="${this.styling.objectbg}" opacity="${this.styling.opacity}" name="${this.selected}"></loader>`
+      this.code=`<loader object="${this.styling.objectcolor}" color1="${this.styling.animationcolor}" color2="${this.styling.animationcolor2}" size="${this.styling.size}" speed="${this.styling.speed}" bg="${this.styling.bgcolor}" objectbg="${this.styling.objectbg}" opacity="${this.styling.opacity}" disableScrolling="${this.styling.disableScrolling}" name="${this.selected}"></loader>`
       setTimeout(() => {
         this.selected='';
       }, this.value*1000);

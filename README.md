@@ -88,6 +88,7 @@ new Vue({
 | objectbg | string | '#999793' | set the color of the loader object background. hex or color |
 | opacity | number | 80 | set the opacity of background |
 | speed | number | 2 | animation speed in seconds |
+| disableScrolling | boolean | false | disable page scrolling when preloader is open |
 
 ## Author
 
