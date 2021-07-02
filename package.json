@@ -59,6 +59,7 @@
   "files": [
     "dist/*",
     "src/*",
+    "mixins/*",
     "*.json",
     "*.js"
   ]
