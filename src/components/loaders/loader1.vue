@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import overflowMixin from '@/mixins/overflow';
+    import overflowMixin from '../../mixins/overflow';
 
     export default {
         name: "static-loader",
