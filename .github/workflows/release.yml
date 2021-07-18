@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm install
-      - run: npm run publish
+      - run: npm run build-bundle
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
