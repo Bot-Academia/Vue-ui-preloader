@@ -31,6 +31,8 @@ npm install --save vue-ui-preloader
 
 ## Usage
 
+Vue 2 Sandbox link - https://codesandbox.io/s/hungry-grass-7fx4z?file=/src/App.vue
+
 In your main.js
 ```js
 import loader from "vue-ui-preloader";
