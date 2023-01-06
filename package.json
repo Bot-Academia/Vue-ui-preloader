@@ -30,7 +30,7 @@
     "@semantic-release/release-notes-generator": "^9.0.3",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-service": "~5.0.8",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
