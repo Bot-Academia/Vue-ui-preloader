@@ -1,7 +1,7 @@
 <template>
     <div id="overlay-spinner" :style="{'background-color': bgcolors}">
 
-
+        A CARREGAR ...
         <div class="loader-spinner" :style="{'border': size + 'px solid ' + objectbg,'border-top': size + 'px solid ' + object}"></div>
     </div>
 </template>
@@ -31,7 +31,6 @@
                 c= '0x'+c.join('');
                 this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
-            console.log(this.speed);
         }
     }
 </script>
@@ -49,6 +48,14 @@
         right: 0;
         bottom: 0;
         z-index:1000;
+        font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: 800;
+        color: #384aeb;
     }
 
     .loader-spinner{

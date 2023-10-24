@@ -30,7 +30,6 @@
                 c= '0x'+c.join('');
                 this.bgcolors= 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',' + this.opacity/100 +')';
             }
-            console.log(this.speed);
         }
     }
 </script>
