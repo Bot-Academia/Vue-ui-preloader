@@ -4,7 +4,7 @@ export default {
           document.body.classList.add("overflowHidden");
         }
       },
-    destroyed() {
+      deactivated() {
         if (this.disableScrolling) {
           document.body.classList.remove("overflowHidden");
         }
